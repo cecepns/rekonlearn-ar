@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>REKONLEARN AR - Halaman 8: Spreadsheet</title>
+  <meta name="description" content="Spreadsheet Latihan Praktik Rekonsiliasi Bank Interaktif - Rekonlearn AR UNESA.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body>
+
+  <!-- Outer Desktop Viewport Wrapper -->
+  <div class="app-viewport-wrapper" id="viewport-wrapper">
+    
+    <!-- Desktop Top Control Bar -->
+    <div class="top-control-bar">
+      <div class="brand-badge">
+        <img src="assets/logo.png" alt="UNESA Logo">
+        <span>REKONLEARN AR</span>
+      </div>
+      <div class="control-actions">
+        <button class="btn-ctrl" id="btn-toggle-sound" title="Toggle Suara">
+          <span id="sound-icon">🔊</span> Suara
+        </button>
+        <button class="btn-ctrl" id="btn-toggle-fullscreen" title="Toggle Tampilan Layar">
+          <span id="view-mode-icon">⛶</span> <span id="view-mode-text">Layar Penuh</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Smartphone Frame Container -->
+    <main class="smartphone-frame" id="phone-frame">
+      
+      <!-- Top Phone Status Bar -->
+      <div class="phone-status-bar">
+        <span class="status-time" id="status-clock">09:41</span>
+        <div class="status-notch"></div>
+        <div class="status-icons">
+          <span>📶</span>
+          <span>5G</span>
+          <span>🔋</span>
+        </div>
+      </div>
+
+      <!-- Screen Container -->
+      <div class="screen-container">
+
+        <!-- =================================================================
+             HALAMAN 8: SPREADSHEET (Pengganti Kuis Evaluasi)
+             ================================================================= -->
+        <section class="screen active" id="screen-spreadsheet" aria-label="Spreadsheet Latihan">
+          <header class="app-header">
+            <a href="menu.html" class="btn-menu-badge" title="Kembali ke Menu Utama">
+              <div class="badge-circle">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <span class="badge-text">MENU</span>
+            </a>
+            <a href="index.html" class="unesa-logo-wrap" title="Beranda">
+              <img src="assets/logo.png" alt="Logo UNESA">
+            </a>
+          </header>
+
+          <!-- Banner -->
+          <div class="page-title-banner banner-spreadsheet">
+            <div class="banner-icon">
+              <img src="assets/icon_spreadsheet.png" alt="Ikon Spreadsheet">
+            </div>
+            <h2 class="banner-title">Spreadsheet</h2>
+          </div>
+
+          <!-- Intro Soal Kasus -->
+          <div class="sheet-intro-card">
+            <h4>📊 Latihan Mandiri: Rekonsiliasi Bank</h4>
+            <p><strong>Kasus:</strong> PT Maju Bersama pada 31 Desember 2026. Masukkan angka penyesuaian untuk memverifikasi apakah kedua saldo menghasilkan <em>Adjusted Balance</em> yang seimbang.</p>
+          </div>
+
+          <!-- Interactive Spreadsheet Table: Sisi Bank -->
+          <div class="spreadsheet-table-wrap">
+            <table class="rekon-table">
+              <thead>
+                <tr>
+                  <th colspan="2">SISI LAPORAN BANK</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Saldo Kas menurut Bank</td>
+                  <td><input type="number" class="sheet-input" id="bank-saldo" value="54400000"></td>
+                </tr>
+                <tr class="header-sub">
+                  <td colspan="2">Ditambah:</td>
+                </tr>
+                <tr>
+                  <td>Setoran Dalam Perjalanan (Deposit in Transit)</td>
+                  <td><input type="number" class="sheet-input" id="bank-tambah-1" value="8200000"></td>
+                </tr>
+                <tr class="header-sub">
+                  <td colspan="2">Dikurangi:</td>
+                </tr>
+                <tr>
+                  <td>Cek yang Masih Beredar (Outstanding Checks)</td>
+                  <td><input type="number" class="sheet-input" id="bank-kurang-1" value="17500000"></td>
+                </tr>
+                <tr style="background: #e6f4ea;">
+                  <td><strong>Saldo Bank yang Disesuaikan</strong></td>
+                  <td class="sheet-calculated" id="calc-bank-final">Rp 45.100.000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Interactive Spreadsheet Table: Sisi Buku Perusahaan -->
+          <div class="spreadsheet-table-wrap">
+            <table class="rekon-table">
+              <thead>
+                <tr>
+                  <th colspan="2">SISI BUKU PERUSAHAAN</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Saldo Kas menurut Buku Perusahaan</td>
+                  <td><input type="number" class="sheet-input" id="buku-saldo" value="45500000"></td>
+                </tr>
+                <tr class="header-sub">
+                  <td colspan="2">Ditambah:</td>
+                </tr>
+                <tr>
+                  <td>Pendapatan Jasa Giro Bank</td>
+                  <td><input type="number" class="sheet-input" id="buku-tambah-1" value="600000"></td>
+                </tr>
+                <tr>
+                  <td>Pelunasan Piutang via Bank (Inkaso)</td>
+                  <td><input type="number" class="sheet-input" id="buku-tambah-2" value="1000000"></td>
+                </tr>
+                <tr class="header-sub">
+                  <td colspan="2">Dikurangi:</td>
+                </tr>
+                <tr>
+                  <td>Biaya Administrasi Bank</td>
+                  <td><input type="number" class="sheet-input" id="buku-kurang-1" value="150000"></td>
+                </tr>
+                <tr>
+                  <td>Cek Pelanggan Ditolak / Kosong (NSF)</td>
+                  <td><input type="number" class="sheet-input" id="buku-kurang-2" value="1850000"></td>
+                </tr>
+                <tr style="background: #e6f4ea;">
+                  <td><strong>Saldo Buku yang Disesuaikan</strong></td>
+                  <td class="sheet-calculated" id="calc-buku-final">Rp 45.100.000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Alert Status -->
+          <div class="sheet-status-alert balanced" id="sheet-alert-balanced">
+            <span style="font-size: 1.6rem;">🎉</span>
+            <div>
+              <strong>SEIMBANG (BALANCED)!</strong>
+              <div style="font-size: 0.8rem; margin-top: 2px;">Saldo kas setelah disesuaikan bernilai tepat sama: <span id="alert-balance-val">Rp 45.100.000</span></div>
+            </div>
+          </div>
+
+          <div class="sheet-status-alert unbalanced" id="sheet-alert-unbalanced">
+            <span style="font-size: 1.6rem;">⚠️</span>
+            <div>
+              <strong>BELUM SEIMBANG (UNBALANCED)!</strong>
+              <div style="font-size: 0.8rem; margin-top: 2px;">Terdapat selisih antara sisi bank dan sisi buku. Periksa kembali nominal item penyesuaian Anda!</div>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="sheet-actions-row">
+            <button class="btn-sheet-calc" id="btn-rekon-calc">
+              ✓ Hitung & Cek Keseimbangan
+            </button>
+            <button class="btn-sheet-reset" id="btn-rekon-reset">
+              ↺ Reset
+            </button>
+          </div>
+
+          <div class="subpage-back-footer">
+            <a href="menu.html" class="btn-back-menu">
+              ← Kembali ke Menu Utama
+            </a>
+          </div>
+        </section>
+
+      </div> <!-- End Screen Container -->
+    </main> <!-- End Smartphone Frame -->
+
+    <!-- Quick Drawer Menu Modal -->
+    <div class="modal-overlay" id="modal-drawer-overlay" aria-hidden="true">
+      <div class="modal-dialog" style="max-width: 380px;">
+        <div class="modal-header">
+          <h3 class="modal-title">🧭 Navigasi Cepat</h3>
+          <button class="btn-modal-close" id="btn-close-drawer" aria-label="Tutup Navigasi">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="drawer-menu-list">
+            <a href="index.html" class="drawer-menu-item" style="background: #0284c7;">
+              <img src="assets/logo.png" alt="Beranda"> Beranda Utama
+            </a>
+            <a href="profil.html" class="drawer-menu-item card-profil">
+              <img src="assets/icon_profil.png" alt="Profil"> Profil Penulis
+            </a>
+            <a href="capaian.html" class="drawer-menu-item card-capaian">
+              <img src="assets/icon_capaian.png" alt="Capaian"> Capaian Pembelajaran
+            </a>
+            <a href="materi.html" class="drawer-menu-item card-materi">
+              <img src="assets/icon_materi.png" alt="Materi"> Materi Pembelajaran
+            </a>
+            <a href="kamera.html" class="drawer-menu-item card-kamera">
+              <img src="assets/icon_kamera.png" alt="AR"> Kamera AR
+            </a>
+            <a href="video.html" class="drawer-menu-item card-video">
+              <img src="assets/icon_video.png" alt="Video"> Video Pembelajaran
+            </a>
+            <a href="spreadsheet.html" class="drawer-menu-item card-spreadsheet">
+              <img src="assets/icon_spreadsheet.png" alt="Spreadsheet"> Spreadsheet Latihan
+            </a>
+            <a href="informasi.html" class="drawer-menu-item card-informasi">
+              <img src="assets/icon_informasi.png" alt="Informasi"> Informasi & Glosarium
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div> <!-- End App Viewport Wrapper -->
+
+  <script src="app.js"></script>
+</body>
+</html>

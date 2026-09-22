@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-profil: #f8b4c4;
+  --color-capaian: #f6be32;
+  --color-materi: #74b3f6;
+  --color-kamera: #889af2;
+  --color-video: #659a7f;
+  --color-spreadsheet: #f4b3a1;
+  --color-informasi: #e66271;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(56, 189, 248, 0.4);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(56, 189, 248, 0.7);
+}
+
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Scanning Beam Animation for AR */
+@keyframes arScan {
+  0% {
+    top: 10%;
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    top: 90%;
+    opacity: 0.2;
+  }
+}
+
+.animate-scan-beam {
+  animation: arScan 2.4s ease-in-out infinite alternate;
+}
+
+/* Shimmer effect */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+
+/* Smooth active button press */
+.btn-press {
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+.btn-press:active {
+  transform: scale(0.96);
+}

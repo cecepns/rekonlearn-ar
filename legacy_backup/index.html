@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>REKONLEARN AR - Halaman 1: Beranda</title>
+  <meta name="description" content="Media Pembelajaran Rekonsiliasi Bank Interaktif berbasis Web dan Augmented Reality.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body>
+
+  <!-- Outer Desktop Viewport Wrapper -->
+  <div class="app-viewport-wrapper" id="viewport-wrapper">
+    
+    <!-- Desktop Top Control Bar -->
+    <div class="top-control-bar">
+      <div class="brand-badge">
+        <img src="assets/logo.png" alt="UNESA Logo">
+        <span>REKONLEARN AR</span>
+      </div>
+      <div class="control-actions">
+        <button class="btn-ctrl" id="btn-toggle-sound" title="Toggle Suara">
+          <span id="sound-icon">🔊</span> Suara
+        </button>
+        <button class="btn-ctrl" id="btn-toggle-fullscreen" title="Toggle Tampilan Layar">
+          <span id="view-mode-icon">⛶</span> <span id="view-mode-text">Layar Penuh</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Smartphone Frame Container -->
+    <main class="smartphone-frame" id="phone-frame">
+      
+      <!-- Top Phone Status Bar -->
+      <div class="phone-status-bar">
+        <span class="status-time" id="status-clock">09:41</span>
+        <div class="status-notch"></div>
+        <div class="status-icons">
+          <span>📶</span>
+          <span>5G</span>
+          <span>🔋</span>
+        </div>
+      </div>
+
+      <!-- Screen Container -->
+      <div class="screen-container">
+
+        <!-- =================================================================
+             HALAMAN 1: BERANDA / SPLASH SCREEN (Sesuai 1.jpeg & bg.jpeg)
+             ================================================================= -->
+        <section class="screen active" id="screen-home" aria-label="Beranda Rekonlearn AR">
+          <!-- Background Image bg.jpeg -->
+          <div class="home-bg-container">
+            <img src="assets/bg.jpeg" alt="Latar Belakang Gedung Bank Rekonlearn AR">
+          </div>
+          
+          <div class="home-content-overlay">
+            <!-- Logo UNESA logo.png -->
+            <div class="home-top-logo">
+              <img src="assets/logo.png" alt="Logo UNESA">
+            </div>
+
+            <!-- Title & Subtitle -->
+            <div class="home-titles">
+              <h1 class="main-app-title">REKONLEARN</h1>
+              <div class="main-app-subtitle">AR</div>
+            </div>
+
+            <!-- Tombol Mulai menuju menu.html -->
+            <div class="home-actions">
+              <a href="menu.html" class="btn-mulai" id="btn-start" aria-label="Mulai Masuk ke Menu">
+                Mulai
+              </a>
+            </div>
+          </div>
+        </section>
+
+      </div> <!-- End Screen Container -->
+    </main> <!-- End Smartphone Frame -->
+
+  </div> <!-- End App Viewport Wrapper -->
+
+  <script src="app.js"></script>
+</body>
+</html>

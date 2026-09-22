@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>REKONLEARN AR - Halaman 4: Capaian Pembelajaran</title>
+  <meta name="description" content="Capaian Pembelajaran Rekonsiliasi Bank Interaktif - Rekonlearn AR UNESA.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body>
+
+  <!-- Outer Desktop Viewport Wrapper -->
+  <div class="app-viewport-wrapper" id="viewport-wrapper">
+    
+    <!-- Desktop Top Control Bar -->
+    <div class="top-control-bar">
+      <div class="brand-badge">
+        <img src="assets/logo.png" alt="UNESA Logo">
+        <span>REKONLEARN AR</span>
+      </div>
+      <div class="control-actions">
+        <button class="btn-ctrl" id="btn-toggle-sound" title="Toggle Suara">
+          <span id="sound-icon">🔊</span> Suara
+        </button>
+        <button class="btn-ctrl" id="btn-toggle-fullscreen" title="Toggle Tampilan Layar">
+          <span id="view-mode-icon">⛶</span> <span id="view-mode-text">Layar Penuh</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Smartphone Frame Container -->
+    <main class="smartphone-frame" id="phone-frame">
+      
+      <!-- Top Phone Status Bar -->
+      <div class="phone-status-bar">
+        <span class="status-time" id="status-clock">09:41</span>
+        <div class="status-notch"></div>
+        <div class="status-icons">
+          <span>📶</span>
+          <span>5G</span>
+          <span>🔋</span>
+        </div>
+      </div>
+
+      <!-- Screen Container -->
+      <div class="screen-container">
+
+        <!-- =================================================================
+             HALAMAN 4: CAPAIAN PEMBELAJARAN (Sesuai 4.jpeg)
+             ================================================================= -->
+        <section class="screen active" id="screen-capaian" aria-label="Capaian Pembelajaran">
+          <header class="app-header">
+            <a href="menu.html" class="btn-menu-badge" title="Kembali ke Menu Utama">
+              <div class="badge-circle">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <span class="badge-text">MENU</span>
+            </a>
+            <a href="index.html" class="unesa-logo-wrap" title="Beranda">
+              <img src="assets/logo.png" alt="Logo UNESA">
+            </a>
+          </header>
+
+          <!-- Banner -->
+          <div class="page-title-banner banner-capaian">
+            <div class="banner-icon">
+              <img src="assets/icon_capaian.png" alt="Ikon Capaian">
+            </div>
+            <h2 class="banner-title">Capaian Pembelajaran</h2>
+          </div>
+
+          <!-- 5 Numbered Ribbon Chevron Items (Matching 4.jpeg) -->
+          <div class="capaian-list">
+            <!-- Item 1 -->
+            <div class="capaian-item" id="capaian-1">
+              <div class="capaian-row" onclick="toggleCapaian(1)">
+                <div class="ribbon-number-btn">1</div>
+                <div class="capaian-row-summary">
+                  Memahami Konsep & Tujuan Dasar Rekonsiliasi Bank
+                </div>
+              </div>
+              <div class="capaian-detail-panel">
+                <p>Mahasiswa mampu mendefinisikan arti rekonsiliasi bank, menjelaskan mengapa pencatatan perusahaan dan laporan bank sering berbeda, serta memahami pentingnya pengendalian internal kas.</p>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="capaian-item" id="capaian-2">
+              <div class="capaian-row" onclick="toggleCapaian(2)">
+                <div class="ribbon-number-btn">2</div>
+                <div class="capaian-row-summary">
+                  Mengidentifikasi Faktor Penyebab Perbedaan Saldo Kas
+                </div>
+              </div>
+              <div class="capaian-detail-panel">
+                <p>Mahasiswa mampu membedakan pos-pos transaksi penambah dan pengurang pada saldo bank (Setoran dalam perjalanan, Cek beredar) serta pada saldo buku perusahaan (Jasa giro, Biaya admin, NSF check/cek kosong).</p>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="capaian-item" id="capaian-3">
+              <div class="capaian-row" onclick="toggleCapaian(3)">
+                <div class="ribbon-number-btn">3</div>
+                <div class="capaian-row-summary">
+                  Menganalisis Bukti Transaksi & Rekening Koran
+                </div>
+              </div>
+              <div class="capaian-detail-panel">
+                <p>Mahasiswa terampil menelaah data rekening koran bank (<em>Bank Statement</em>), memverifikasi debit memo & credit memo, serta mendeteksi kekeliruan pencatatan (<em>error correction</em>).</p>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="capaian-item" id="capaian-4">
+              <div class="capaian-row" onclick="toggleCapaian(4)">
+                <div class="ribbon-number-btn">4</div>
+                <div class="capaian-row-summary">
+                  Menyusun Laporan Rekonsiliasi Bank (2 Kolom & Staffel)
+                </div>
+              </div>
+              <div class="capaian-detail-panel">
+                <p>Mahasiswa terampil merumuskan dan menyusun format laporan rekonsiliasi bank untuk menghasilkan saldo kas akhir yang benar dan seimbang (<em>Adjusted Balance</em>).</p>
+              </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="capaian-item" id="capaian-5">
+              <div class="capaian-row" onclick="toggleCapaian(5)">
+                <div class="ribbon-number-btn">5</div>
+                <div class="capaian-row-summary">
+                  Membuat Jurnal Penyesuaian Hasil Rekonsiliasi Kas
+                </div>
+              </div>
+              <div class="capaian-detail-panel">
+                <p>Mahasiswa mampu mencatat jurnal penyesuaian (<em>adjusting journal entries</em>) yang diperlukan atas transaksi pada sisi buku kas perusahaan agar saldo kas tercermin wajar di neraca.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="subpage-back-footer">
+            <a href="menu.html" class="btn-back-menu">
+              ← Kembali ke Menu Utama
+            </a>
+          </div>
+        </section>
+
+      </div> <!-- End Screen Container -->
+    </main> <!-- End Smartphone Frame -->
+
+    <!-- Quick Drawer Menu Modal -->
+    <div class="modal-overlay" id="modal-drawer-overlay" aria-hidden="true">
+      <div class="modal-dialog" style="max-width: 380px;">
+        <div class="modal-header">
+          <h3 class="modal-title">🧭 Navigasi Cepat</h3>
+          <button class="btn-modal-close" id="btn-close-drawer" aria-label="Tutup Navigasi">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="drawer-menu-list">
+            <a href="index.html" class="drawer-menu-item" style="background: #0284c7;">
+              <img src="assets/logo.png" alt="Beranda"> Beranda Utama
+            </a>
+            <a href="profil.html" class="drawer-menu-item card-profil">
+              <img src="assets/icon_profil.png" alt="Profil"> Profil Penulis
+            </a>
+            <a href="capaian.html" class="drawer-menu-item card-capaian">
+              <img src="assets/icon_capaian.png" alt="Capaian"> Capaian Pembelajaran
+            </a>
+            <a href="materi.html" class="drawer-menu-item card-materi">
+              <img src="assets/icon_materi.png" alt="Materi"> Materi Pembelajaran
+            </a>
+            <a href="kamera.html" class="drawer-menu-item card-kamera">
+              <img src="assets/icon_kamera.png" alt="AR"> Kamera AR
+            </a>
+            <a href="video.html" class="drawer-menu-item card-video">
+              <img src="assets/icon_video.png" alt="Video"> Video Pembelajaran
+            </a>
+            <a href="spreadsheet.html" class="drawer-menu-item card-spreadsheet">
+              <img src="assets/icon_spreadsheet.png" alt="Spreadsheet"> Spreadsheet Latihan
+            </a>
+            <a href="informasi.html" class="drawer-menu-item card-informasi">
+              <img src="assets/icon_informasi.png" alt="Informasi"> Informasi & Glosarium
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div> <!-- End App Viewport Wrapper -->
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>REKONLEARN AR - Halaman 2: Menu Utama</title>
+  <meta name="description" content="Menu Utama Media Pembelajaran Rekonsiliasi Bank Interaktif berbasis Web dan Augmented Reality.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body>
+
+  <!-- Outer Desktop Viewport Wrapper -->
+  <div class="app-viewport-wrapper" id="viewport-wrapper">
+    
+    <!-- Desktop Top Control Bar -->
+    <div class="top-control-bar">
+      <div class="brand-badge">
+        <img src="assets/logo.png" alt="UNESA Logo">
+        <span>REKONLEARN AR</span>
+      </div>
+      <div class="control-actions">
+        <button class="btn-ctrl" id="btn-toggle-sound" title="Toggle Suara">
+          <span id="sound-icon">🔊</span> Suara
+        </button>
+        <button class="btn-ctrl" id="btn-toggle-fullscreen" title="Toggle Tampilan Layar">
+          <span id="view-mode-icon">⛶</span> <span id="view-mode-text">Layar Penuh</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Smartphone Frame Container -->
+    <main class="smartphone-frame" id="phone-frame">
+      
+      <!-- Top Phone Status Bar -->
+      <div class="phone-status-bar">
+        <span class="status-time" id="status-clock">09:41</span>
+        <div class="status-notch"></div>
+        <div class="status-icons">
+          <span>📶</span>
+          <span>5G</span>
+          <span>🔋</span>
+        </div>
+      </div>
+
+      <!-- Screen Container -->
+      <div class="screen-container">
+
+        <!-- =================================================================
+             HALAMAN 2: MENU UTAMA (Sesuai 2.jpeg)
+             ================================================================= -->
+        <section class="screen active" id="screen-menu" aria-label="Menu Utama">
+          <!-- Header -->
+          <header class="app-header">
+            <button class="btn-menu-badge open-drawer-btn" aria-label="Buka Laci Menu">
+              <div class="badge-circle">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <span class="badge-text">MENU</span>
+            </button>
+
+            <a href="index.html" class="unesa-logo-wrap" title="Kembali ke Beranda">
+              <img src="assets/logo.png" alt="Logo UNESA">
+            </a>
+          </header>
+
+          <!-- 7 Menu Navigation Cards -->
+          <nav class="menu-grid" aria-label="Daftar Menu Pembelajaran">
+            <!-- 1. Profil Penulis -->
+            <a href="profil.html" class="menu-card card-profil">
+              <div class="menu-card-icon">
+                <img src="assets/icon_profil.png" alt="Ikon Profil Penulis">
+              </div>
+              <span class="menu-card-title">Profil Penulis</span>
+            </a>
+
+            <!-- 2. Capaian Pembelajaran -->
+            <a href="capaian.html" class="menu-card card-capaian">
+              <div class="menu-card-icon">
+                <img src="assets/icon_capaian.png" alt="Ikon Capaian Pembelajaran">
+              </div>
+              <span class="menu-card-title">Capaian Pembelajaran</span>
+            </a>
+
+            <!-- 3. Materi -->
+            <a href="materi.html" class="menu-card card-materi">
+              <div class="menu-card-icon">
+                <img src="assets/icon_materi.png" alt="Ikon Materi">
+              </div>
+              <span class="menu-card-title">Materi</span>
+            </a>
+
+            <!-- 4. Kamera AR -->
+            <a href="kamera.html" class="menu-card card-kamera">
+              <div class="menu-card-icon">
+                <img src="assets/icon_kamera.png" alt="Ikon Kamera AR">
+              </div>
+              <span class="menu-card-title">Kamera AR</span>
+            </a>
+
+            <!-- 5. Video Pembelajaran -->
+            <a href="video.html" class="menu-card card-video">
+              <div class="menu-card-icon">
+                <img src="assets/icon_video.png" alt="Ikon Video Pembelajaran">
+              </div>
+              <span class="menu-card-title">Video Pembelajaran</span>
+            </a>
+
+            <!-- 6. Spreadsheet (Pengganti Kuis Evaluasi) -->
+            <a href="spreadsheet.html" class="menu-card card-spreadsheet">
+              <div class="menu-card-icon">
+                <img src="assets/icon_spreadsheet.png" alt="Ikon Spreadsheet">
+              </div>
+              <span class="menu-card-title">Spreadsheet</span>
+            </a>
+
+            <!-- 7. Informasi -->
+            <a href="informasi.html" class="menu-card card-informasi">
+              <div class="menu-card-icon">
+                <img src="assets/icon_informasi.png" alt="Ikon Informasi">
+              </div>
+              <span class="menu-card-title">Informasi</span>
+            </a>
+          </nav>
+        </section>
+
+      </div> <!-- End Screen Container -->
+    </main> <!-- End Smartphone Frame -->
+
+    <!-- =====================================================================
+         MODAL QUICK DRAWER MENU
+         ===================================================================== -->
+    <div class="modal-overlay" id="modal-drawer-overlay" aria-hidden="true">
+      <div class="modal-dialog" style="max-width: 380px;">
+        <div class="modal-header">
+          <h3 class="modal-title">🧭 Navigasi Cepat</h3>
+          <button class="btn-modal-close" id="btn-close-drawer" aria-label="Tutup Navigasi">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="drawer-menu-list">
+            <a href="index.html" class="drawer-menu-item" style="background: #0284c7;">
+              <img src="assets/logo.png" alt="Beranda"> Beranda Utama
+            </a>
+            <a href="profil.html" class="drawer-menu-item card-profil">
+              <img src="assets/icon_profil.png" alt="Profil"> Profil Penulis
+            </a>
+            <a href="capaian.html" class="drawer-menu-item card-capaian">
+              <img src="assets/icon_capaian.png" alt="Capaian"> Capaian Pembelajaran
+            </a>
+            <a href="materi.html" class="drawer-menu-item card-materi">
+              <img src="assets/icon_materi.png" alt="Materi"> Materi Pembelajaran
+            </a>
+            <a href="kamera.html" class="drawer-menu-item card-kamera">
+              <img src="assets/icon_kamera.png" alt="AR"> Kamera AR
+            </a>
+            <a href="video.html" class="drawer-menu-item card-video">
+              <img src="assets/icon_video.png" alt="Video"> Video Pembelajaran
+            </a>
+            <a href="spreadsheet.html" class="drawer-menu-item card-spreadsheet">
+              <img src="assets/icon_spreadsheet.png" alt="Spreadsheet"> Spreadsheet Latihan
+            </a>
+            <a href="informasi.html" class="drawer-menu-item card-informasi">
+              <img src="assets/icon_informasi.png" alt="Informasi"> Informasi & Glosarium
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div> <!-- End App Viewport Wrapper -->
+
+  <script src="app.js"></script>
+</body>
+</html>
