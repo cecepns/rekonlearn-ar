@@ -10,7 +10,9 @@ import {
   Video, 
   FileSpreadsheet, 
   Info,
-  Compass
+  Compass,
+  Volume2,
+  VolumeX
 } from 'lucide-react';
 import { playClickSound } from '../utils/audio';
 
@@ -26,7 +28,7 @@ const menuItems = [
   { id: 'informasi', label: 'Informasi & Glosarium', icon: Info, bg: 'bg-[#e66271] text-white hover:brightness-105' },
 ];
 
-export default function QuickDrawer({ isOpen, onClose, onSelectScreen, currentScreen }) {
+export default function QuickDrawer({ isOpen, onClose, onSelectScreen, currentScreen, soundEnabled, onToggleSound }) {
   if (!isOpen) return null;
 
   return (
@@ -43,15 +45,26 @@ export default function QuickDrawer({ isOpen, onClose, onSelectScreen, currentSc
             <Compass className="w-5 h-5 text-sky-400" />
             <h3 className="font-display font-bold text-white text-base tracking-wide">Navigasi Cepat</h3>
           </div>
-          <button
-            onClick={() => {
-              playClickSound();
-              onClose();
-            }}
-            className="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 flex items-center justify-center text-slate-400 hover:text-white transition-colors"
-          >
-            <X className="w-4 h-4" />
-          </button>
+          <div className="flex items-center gap-2">
+            {onToggleSound && (
+              <button
+                onClick={onToggleSound}
+                className="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 flex items-center justify-center text-slate-400 hover:text-white transition-colors"
+                title={soundEnabled ? 'Matikan Suara' : 'Nyalakan Suara'}
+              >
+                {soundEnabled ? <Volume2 className="w-4 h-4 text-sky-400" /> : <VolumeX className="w-4 h-4 text-slate-500" />}
+              </button>
+            )}
+            <button
+              onClick={() => {
+                playClickSound();
+                onClose();
+              }}
+              className="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 flex items-center justify-center text-slate-400 hover:text-white transition-colors"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          </div>
         </div>
 
         <nav className="flex-1 overflow-y-auto py-3 space-y-2 pr-1">

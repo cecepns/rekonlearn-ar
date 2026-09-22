@@ -116,6 +116,8 @@ export default function App() {
         onClose={() => setIsDrawerOpen(false)}
         onSelectScreen={handleNavigate}
         currentScreen={currentScreen}
+        soundEnabled={soundOn}
+        onToggleSound={handleToggleSound}
       />
     </div>
   );
