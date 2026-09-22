@@ -19,7 +19,7 @@ export default function HomeScreen({ onStart }) {
 
       {/* Content Container */}
       <div className="relative z-10 flex flex-col items-center justify-between h-full px-6 py-6 text-center">
-        
+
         {/* Top Section (Elevated - Naik ke Atas Sesuai Request) */}
         <div className="flex flex-col items-center pt-2 -mt-1 animate-fadeIn">
           {/* Logo UNESA */}
@@ -36,7 +36,7 @@ export default function HomeScreen({ onStart }) {
             <h1 className="font-display font-black text-3xl sm:text-4xl text-white tracking-wider uppercase drop-shadow-[0_4px_8px_rgba(0,0,0,0.7)]">
               REKONLEARN
             </h1>
-            
+
             <div className="relative inline-flex items-center justify-center">
               <span className="font-display font-black text-5xl sm:text-6xl text-transparent bg-clip-text bg-gradient-to-b from-amber-200 via-amber-400 to-amber-600 drop-shadow-[0_4px_12px_rgba(245,158,11,0.5)]">
                 AR
@@ -45,9 +45,9 @@ export default function HomeScreen({ onStart }) {
               <Sparkles className="w-4 h-4 text-amber-300 absolute bottom-1 -left-5 animate-pulse" />
             </div>
 
-            <p className="text-sky-200/90 text-xs font-medium tracking-wide mt-1 max-w-[240px] leading-relaxed">
+            {/* <p className="text-sky-200/90 text-xs font-medium tracking-wide mt-1 max-w-[240px] leading-relaxed">
               Media Pembelajaran Rekonsiliasi Bank Interaktif & Augmented Reality
-            </p>
+            </p> */}
           </div>
         </div>
 
@@ -62,7 +62,7 @@ export default function HomeScreen({ onStart }) {
           >
             {/* Shimmer light bar */}
             <div className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12 animate-shimmer"></div>
-            
+
             <span className="tracking-wide">Mulai</span>
             <div className="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center group-hover:translate-x-1 transition-transform">
               <ArrowRight className="w-4 h-4 text-white" />
