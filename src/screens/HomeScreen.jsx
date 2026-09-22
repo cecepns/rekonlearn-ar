@@ -69,9 +69,9 @@ export default function HomeScreen({ onStart }) {
             </div>
           </button>
 
-          <div className="text-[11px] text-slate-300/80 font-medium tracking-wide">
+          {/* <div className="text-[11px] text-slate-300/80 font-medium tracking-wide">
             Universitas Negeri Surabaya
-          </div>
+          </div> */}
         </div>
 
       </div>
